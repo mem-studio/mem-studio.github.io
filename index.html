@@ -359,6 +359,51 @@ body.intro{overflow:hidden}
   .cur-a .tag{display:none}
   .sponsors{gap:40px}
 }
+
+/* ===== CELULAR: misma escena que en la computadora ===== */
+html,body{overflow-x:hidden}
+@supports (overflow:clip){html,body{overflow-x:clip}}
+@media (max-width:980px){
+  #hero{min-height:100svh;padding:84px 0 30px;align-items:flex-start}
+  .hero-grid{display:flex;flex-direction:column;align-items:stretch;min-height:0}
+  .hero-left{display:contents}
+  .hero-left .tagl{order:1;font-size:12px;margin-bottom:12px}
+  .hello-wrap{order:2}
+  .hero-name{order:3;font-size:clamp(96px,30vw,150px)}
+  .role{order:4;font-size:22px;margin:8px 0 0}
+  .photo{order:5;position:relative;left:auto;bottom:auto;transform:none;width:auto;max-width:86%;height:min(50svh,430px);margin:6px auto 0;z-index:1}
+  .photo .spin,.photo .front{height:100%}
+  .photo img{height:100%;width:auto;margin:0 auto}
+  .photo .holo,.photo .scan{left:50%;right:auto;width:auto;aspect-ratio:750/1300;transform:translateX(-50%)}
+  .photo .back{display:none}
+  .hero-left p{order:6;max-width:none;font-size:15.5px;margin:18px 0 20px}
+  .btn-wrap{order:7}
+  .stats{order:8;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:22px 0 0;margin-top:20px;border-top:1px solid rgba(255,255,255,.08)}
+  .stat .n{font-size:30px}
+  .stat .l{font-size:10.5px}
+  .bigword{top:300px;bottom:auto;font-size:34vw;opacity:.9}
+  .hero-code{display:none}
+  .photo.rv,.photo.rv.in{transform:none}
+  section{padding:80px 0}
+  h2.display{font-size:clamp(36px,10.5vw,64px);margin-bottom:30px}
+  .sol,.sig,.punch,.raw,.proc,.why,.wins,.contact,.story,.journey{grid-template-columns:minmax(0,1fr)!important}
+  .sol>*,.proc>*,.contact>*,.wins>*,.raw>*{min-width:0}
+  .code{overflow-wrap:anywhere}
+  .ln{grid-template-columns:28px minmax(0,1fr)}
+  .code{font-size:14px}
+  .sol .code .c,.steps .c{font-size:13.5px}
+  .sig .txt{font-size:17px}
+  .steps .ttl{font-size:26px}
+  .why .it .h{font-size:28px}
+  .nm .lt{font-size:64px}.nm h4{font-size:24px}
+  .contact h2{font-size:clamp(46px,13vw,70px)}
+  .final .display{font-size:clamp(52px,15vw,90px)}
+  .divider .pill{font-size:10px;padding:5px 10px}
+  .sponsors{gap:22px 30px}
+  .sp-fat img{height:40px}
+  #buildbar{left:12px;right:12px;transform:none;justify-content:space-between}
+  .wrap{width:min(1200px,88vw)}
+}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 </head>
@@ -415,11 +460,11 @@ body.intro{overflow:hidden}
     </div></div>
     <div class="hero-left">
       <div class="tagl rv"><span class="c">// desarrollo web · diseño · sistemas</span><br><span class="k">import</span> { confianza } <span class="k">from</span> <span class="s">"MEM"</span>;</div>
-      <div class="rv"><span class="hello">Hola, somos</span></div>
+      <div class="rv hello-wrap"><span class="hello">Hola, somos</span></div>
       <h1 class="display hero-name rv">MEM<span class="dot">.</span></h1>
       <div class="role rv">Equipo de desarrolladores<br>y diseñadores web</div>
       <p class="rv">Tu negocio, en su mejor versión digital. Páginas web, sistemas, apps y automatizaciones a medida: vos te enfocás en tu negocio, nosotros en que la tecnología trabaje para vos.</p>
-      <div class="rv"><a href="#clientes" class="btn">Ver nuestro trabajo <span>→</span></a>
+      <div class="rv btn-wrap"><a href="#clientes" class="btn">Ver nuestro trabajo <span>→</span></a>
         <div class="loc">online · San Miguel de Tucumán, AR</div></div>
     </div>
     <div class="stats">
