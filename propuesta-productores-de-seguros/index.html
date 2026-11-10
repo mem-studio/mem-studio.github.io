@@ -84,11 +84,12 @@ section{padding:84px 0}
 
 /* companies */
 .cos{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.cogrid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.cogrid{display:grid;grid-template-columns:repeat(5,1fr);gap:46px 40px;align-items:center;justify-items:center;padding:10px 0}
 @media(max-width:900px){.cogrid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:520px){.cogrid{grid-template-columns:repeat(2,1fr)}}
-.co{border:1px solid var(--line);border-radius:14px;padding:18px 12px;text-align:center;font-weight:800;font-size:14px;color:var(--navy2);background:var(--cream);min-height:74px;display:grid;place-items:center}
-.co small{display:block;font-weight:600;color:var(--muted);font-size:11.5px;margin-top:3px}
+@media(max-width:520px){.cogrid{grid-template-columns:repeat(2,1fr);gap:34px 24px}}
+.co{display:flex;align-items:center;justify-content:center;height:56px;width:100%}
+.co img{max-height:46px;max-width:100%;width:auto;object-fit:contain;transition:transform .25s}
+.co:hover img{transform:scale(1.06)}
 .note{font-size:13px;color:var(--muted);margin-top:16px}
 
 /* cotizador */
@@ -253,10 +254,16 @@ footer{background:#050506;color:#A6A6AE;padding:40px 0 30px;font-size:13.5px}
   <div class="wrap">
     <div class="sh"><div><div class="eyebrow">Compañías</div><h2>Trabajo con aseguradoras sólidas y con presencia en Tucumán.</h2></div><p>Al tener varias compañías, puedo elegir la que mejor responde para cada tipo de riesgo.</p></div>
     <div class="cogrid">
-      <div class="co">Federación Patronal</div><div class="co">Sancor Seguros</div><div class="co">La Segunda</div>
-      <div class="co">San Cristóbal</div><div class="co">Rivadavia Seguros</div><div class="co">Mercantil Andina</div>
-      <div class="co">Allianz</div><div class="co">Zurich</div><div class="co">Mapfre</div>
-      <div class="co">Provincia Seguros</div><div class="co">Río Uruguay Seguros</div><div class="co">Integrity Seguros</div>
+      <div class="co"><img src="logos/fedpat.webp" alt="Federación Patronal Seguros" loading="lazy"></div>
+      <div class="co"><img src="logos/sancor.webp" alt="Sancor Seguros" loading="lazy"></div>
+      <div class="co"><img src="logos/lasegunda.webp" alt="La Segunda Seguros" loading="lazy"></div>
+      <div class="co"><img src="logos/sancristobal.webp" alt="San Cristóbal Seguros" loading="lazy"></div>
+      <div class="co"><img src="logos/rivadavia.webp" alt="Seguros Rivadavia" loading="lazy"></div>
+      <div class="co"><img src="logos/mercantil.webp" alt="Mercantil Andina" loading="lazy"></div>
+      <div class="co"><img src="logos/allianz.webp" alt="Allianz" loading="lazy"></div>
+      <div class="co"><img src="logos/mapfre.webp" alt="Mapfre" loading="lazy"></div>
+      <div class="co"><img src="logos/rus.webp" alt="Río Uruguay Seguros" loading="lazy"></div>
+      <div class="co"><img src="logos/nacion.webp" alt="Nación Seguros" loading="lazy"></div>
     </div>
     <p class="note">Listado de ejemplo: en la versión final aparecen solo las compañías con las que el productor tiene código habilitado.</p>
   </div>
