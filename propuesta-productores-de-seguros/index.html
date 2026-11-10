@@ -47,7 +47,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .facts div{font-size:13px;color:#A8A8B0}.facts b{display:block;color:#fff;font-size:20px;font-family:Fraunces}
 .card-id{background:linear-gradient(160deg,#fff,#F2F2F3);color:var(--ink);border-radius:24px;padding:26px;box-shadow:0 30px 60px rgba(0,0,0,.35);position:relative}
 .card-id .top{display:flex;justify-content:space-between;align-items:flex-start}
-.avatar{width:74px;height:74px;border-radius:20px;background:linear-gradient(135deg,#1C1C1F,#C8102E);color:#fff;display:grid;place-items:center;font-family:Fraunces;font-size:30px}
+.avatar{width:74px;height:74px;border-radius:20px;overflow:hidden;background:linear-gradient(135deg,#1C1C1F,#C8102E);color:#fff;display:grid;place-items:center;font-family:Fraunces;font-size:30px}
 .chip{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--teal2);color:#A50E26;padding:5px 9px;border-radius:7px}
 .card-id h3{font-size:24px;margin:16px 0 2px}
 .card-id .role{color:var(--muted);font-size:14px;font-weight:600}
@@ -132,7 +132,11 @@ section{padding:84px 0}
 .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px;align-items:center}
 @media(max-width:900px){.about{grid-template-columns:1fr}}
 .ph{aspect-ratio:4/5;border-radius:26px;background:linear-gradient(160deg,#2A2A2E,#0B0B0C);position:relative;overflow:hidden;display:grid;place-items:center;color:#fff}
-.ph .ini{font-family:Fraunces;font-size:110px;opacity:.9}
+.avatar img{width:100%;height:100%;object-fit:cover;background:#C8102E}
+.ph{background:radial-gradient(circle at 50% 38%,#2a0a10 0,#0B0B0C 70%)}
+.ph .glow{position:absolute;width:70%;height:55%;top:18%;left:15%;background:radial-gradient(circle,rgba(200,16,46,.55),transparent 70%);filter:blur(30px)}
+.ph .pic{position:absolute;bottom:0;left:50%;transform:translateX(-50%);height:92%;width:auto;filter:contrast(1.05) drop-shadow(-18px 0 36px rgba(200,16,46,.45)) drop-shadow(18px 0 40px rgba(200,16,46,.25))}
+.ph:before{content:"PAS";position:absolute;top:6%;left:0;right:0;text-align:center;font-family:Fraunces;font-weight:700;font-size:150px;color:rgba(255,255,255,.05);letter-spacing:.05em}
 .ph .lbl{position:absolute;bottom:16px;left:16px;right:16px;background:rgba(255,255,255,.12);backdrop-filter:blur(6px);border-radius:14px;padding:12px 14px;font-size:13px}
 .about h2{font-size:clamp(28px,3.4vw,40px);margin:8px 0 14px}
 .about p{color:var(--muted);margin-bottom:12px}
@@ -212,7 +216,7 @@ footer{background:#050506;color:#A6A6AE;padding:40px 0 30px;font-size:13.5px}
       </div>
     </div>
     <div class="card-id">
-      <div class="top"><div class="avatar">SM</div><span class="chip">Matrícula SSN</span></div>
+      <div class="top"><div class="avatar"><img src="sofia-avatar.webp" alt="Sofía Medina"></div><span class="chip">Matrícula SSN</span></div>
       <h3>Sofía Medina</h3>
       <div class="role">Productora Asesora de Seguros</div>
       <dl>
@@ -309,7 +313,7 @@ footer{background:#050506;color:#A6A6AE;padding:40px 0 30px;font-size:13.5px}
 
 <section id="sobre-mi">
   <div class="wrap about">
-    <div class="ph"><div class="ini">SM</div><div class="lbl">Acá va la foto del productor en su oficina o con su equipo.</div></div>
+    <div class="ph"><div class="glow"></div><img class="pic" src="sofia.webp" alt="Sofía Medina, productora asesora de seguros"><div class="lbl"><b style="color:#fff">Sofía Medina</b> · Productora Asesora de Seguros</div></div>
     <div>
       <div class="eyebrow">Sobre mí</div>
       <h2>Asesoramiento cercano, de alguien que conoce Tucumán.</h2>
